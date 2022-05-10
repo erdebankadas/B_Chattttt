@@ -1,0 +1,109 @@
+.titanic {
+    float: none;
+}
+
+.messages {
+    position: relative;
+    padding: 10px 10px 0 10px;
+    margin: 0 0 0 0;
+    height: 400px;
+    overflow-x: hidden;
+    overflow-y: scroll;
+}
+
+.messages .message {
+    clear: both;
+    overflow: hidden;
+    margin-bottom: 20px;
+}
+
+.messages .message.left .avatar {
+    background-color: hsla(194, 74%, 32%, 0.738);
+    float: left;
+}
+
+.messages .message.left .text_wrapper {
+    background-color: hsl(177, 100%, 90%);
+    margin-left: 20px;
+}
+
+.messages .message.left .text_wrapper::after, .messages .message.left .text_wrapper::before {
+    right: 100%;
+    border-right-color: #ffe6cb;
+}
+
+.messages .message.left .text {
+    color: hsla(32, 61%, 46%, 0.942);
+}
+
+.messages .message.right .avatar {
+    background-color: #96e115f2;
+    float: right;
+}
+
+.messages .message.right .text_wrapper {
+    background-color: #2e918274;
+    margin-right: 20px;
+    float: right;
+}
+
+.messages .message.right .text_wrapper::after, .messages .message.right .text_wrapper::before {
+    left: 100%;
+    border-left-color: #2283a9b0;
+}
+
+.messages .message.right .text {
+    color: #46879192;
+}
+
+.messages .message .avatar {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    display: inline-block;
+    text-align: center;
+    color: white;
+    padding-top: 18px;
+}
+
+.messages .message .text_wrapper {
+    display: inline-block;
+    padding: 20px;
+    border-radius: 6px;
+    width: calc(100% - 85px);
+    min-width: 100px;
+    position: relative;
+}
+
+.messages .message .text_wrapper::after, .messages .message .text_wrapper:before {
+    top: 18px;
+    border: solid transparent;
+    content: " ";
+    height: 0;
+    width: 0;
+    position: absolute;
+    pointer-events: none;
+}
+
+.messages .message .text_wrapper::after {
+    border-width: 13px;
+    margin-top: 0;
+}
+
+.messages .message .text_wrapper::before {
+    border-width: 15px;
+    margin-top: -2px;
+}
+
+.messages .message .text_wrapper .text {
+    font-size: 18px;
+    font-weight: 300;
+}
+
+
+/* https://stackoverflow.com/a/47256615/2351696 */
+.list-group{
+    max-height: 570px;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
